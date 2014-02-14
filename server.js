@@ -32,15 +32,14 @@ function answerDoor(req, res, next) {
 var server = restify.createServer();
 server.use(restify.bodyParser({ mapParams: false }));
 
-// PROBLEM - json not changing on POST
 var json = { 
       'knock'    : 'false'
     , 'response' : 'false'
 };
 
-server.get('/:name/door/knock'  , getResponse);
-server.get('/:name/door/answer' , getResponse);
-server.post('/:name/door/knock' , knock);
+server.get('/:name/door/knock', getResponse);
+server.get('/:name/door/answer', getResponse);
+server.post('/:name/door/knock', knock);
 server.post('/:name/door/answer', answerDoor);
 
 server.listen(8080, function() {
