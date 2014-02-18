@@ -2,23 +2,34 @@ body {
     width: 100%;
 }
 
-#container {
-    width: 680px;
+.container {
+    width: 960px;
     margin: 0 auto;
     text-align: center;
 }
 
 .knock-button {
+    margin-top: 30vh;
 	padding: 10px 50px;
 	background-color: rgb(65, 255, 217);
-	border: none;
 	border-radius: 10px;
+    border: none;
 	font-weight: bold;
 	font-size: 171px;
+	font-family: avenir, sans-serif;
+	-webkit-box-shadow: 0px 20px 0px rgb(77, 204, 179);
+	-moz-box-shadow: 0px 20px 0px rgb(77, 204, 179);
 	box-shadow: 0px 20px 0px rgb(77, 204, 179);
-	font-family: avenir;
 }
 
-.knock-button :active {
-	
+.knock-button:focus {
+    outline: 0;
+}
+
+.knock-button:hover {
+}
+
+.knock-button:active {
+	background-color: rgb(77, 204, 179);
+	box-shadow: 0px 10px 0px rgb(43, 145, 125);
 }
