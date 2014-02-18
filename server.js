@@ -31,6 +31,7 @@ function answerDoor(req, res, next) {
 
 var server = restify.createServer();
 server.use(restify.bodyParser({ mapParams: false }));
+server.use(restify.gzipResponse());
 
 // Setup CORS
 restify.CORS.ALLOW_HEADERS.push('accept');
