@@ -10,7 +10,7 @@ function knock(req, res, next) {
 
 function getResponse(req, res, next) {
   res.writeHead(200, {
-      'Content-Type' : 'application/json'
+      'Content-Type': 'application/json'
   });
   res.write(JSON.stringify(json));
   res.end();
@@ -44,8 +44,8 @@ server.use(restify.CORS());
 
 
 var json = { 
-    'knock'   : 'false'
-  , 'response': 'false'
+    knock   : false
+  , response: false
 };
 
 server.get('/:name/door/knock', getResponse);
