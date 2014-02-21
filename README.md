@@ -1,9 +1,10 @@
 #Knock
+A doorbell for [Anand](http://thisisanand.com).
 
 ##TODO
 - [ ] Make prettier
-- [ ] Move to a templating system?
-- [ ] Finish JS
+- [ ] Move to Handlebar templates?
+- [ ] Concatenate + minify CSS?
 
 ##Notes
 - Website
