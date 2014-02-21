@@ -7,6 +7,9 @@ A doorbell for [Anand](http://thisisanand.com).
 - [ ] Concatenate + minify CSS?
 
 ##Notes
-- Website
-    - Uses browserify
-    - bundle.min.js is the result of browserify and minification
+###API
+- Built using Node.js and Restify
+###Website
+- Uses browserify
+- bundle.min.js is the product of browserify and minification
+###Arduino
