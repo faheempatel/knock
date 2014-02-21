@@ -1,4 +1,5 @@
 #Knock
+
 A doorbell for [Anand](http://thisisanand.com).
 
 ##TODO
@@ -7,9 +8,12 @@ A doorbell for [Anand](http://thisisanand.com).
 - [ ] Concatenate + minify CSS?
 
 ##Notes
+
 ###API
 - Built using Node.js and Restify
+
 ###Website
 - Uses browserify
 - bundle.min.js is the product of browserify and minification
+
 ###Arduino
