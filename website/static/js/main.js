@@ -1,13 +1,6 @@
 var $ = require('./jquery.min');
 var config = require('./config');
 
-function renderKnockView() {
-  $('body')
-     .css('background-color', 'rgb(255, 255, 255)');
-  $('.container')
-     .html('<button type="button" class="knock-button">Knock!</button>');
-}
-
 function renderWaitingView() {
   $('body')
      .css('background-color', 'rgb(219, 219, 219)');
@@ -34,8 +27,9 @@ $('.knock-button').on('click', function() {
           clearInterval(interval);
           renderAcceptedView();
         } else if (intervalCount === 60) {
+          // Return to knock button view
           clearInterval(interval);
-          renderKnockView();
+          location.reload();
         }
         ++intervalCount;
       });
