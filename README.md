@@ -1,6 +1,6 @@
 #Knock
 
-A doorbell for [Anand](http://thisisanand.com).
+A doorbell for [Anand](https://twitter.com/subra_Anand).
 
 ##TODO
 - [ ] Make prettier
