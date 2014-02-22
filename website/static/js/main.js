@@ -2,8 +2,6 @@ var $ = require('./jquery.min');
 var config = require('./config');
 
 function renderWaitingView() {
-  $('body')
-     .css('background-color', 'rgb(219, 219, 219)');
   $('.container')
      .html('<i class="fa fa-circle dot"></i><i class="fa fa-circle dot"></i><i class="fa fa-circle dot"></i>');
 }
