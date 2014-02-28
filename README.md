@@ -16,4 +16,9 @@ A doorbell for [Anand](https://twitter.com/subra_Anand).
 - Uses browserify
 - bundle.min.js is the product of browserify and minification
 
-###Arduino
+###Arduino thing
+- Lights up an LED and plays a sound upon receiving a knock from the web app
+- Uses Processing
+  - To receive and update data using the API
+
+###Push Notification System
