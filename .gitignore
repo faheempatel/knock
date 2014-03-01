@@ -1,4 +1,4 @@
 *.swp
 *.swo
 .DS_Store
-website/static/js/config.js
+config.js
