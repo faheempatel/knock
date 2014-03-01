@@ -1,36 +1,46 @@
 var restify = require('restify');
+var config = require('./config');
+var pushover = require('node-pushover');
+
+var push = new pushover({
+    token: config.token
+  , user : config.user
+});
 
 function knock(req, res, next) {
-  if (req.body.knock === "true") {
-      json.knock = true;
-      json.response = false;
+  if (req.params.knock === 'true') {
+    json.knock = true;
+    json.response = false;
+    push.send("Knock", config.url+'/door/answer/notification?response=true');
   }
   res.end();
 }
 
 function getResponse(req, res, next) {
   res.writeHead(200, {
-      'Content-Type': 'application/json'
+    'Content-Type': 'application/json'
   });
   res.write(JSON.stringify(json));
   res.end();
 }
 
 function answerDoor(req, res, next) {
-  if (req.body.response === "true" && json.knock === true) {
-      json.response = true;
-      json.knock = false;
+  if (req.params.response === 'true' && json.knock === true) {
+    json.response = true;
+    json.knock = false;
 
-      // Unset response
-      setTimeout(function () {
-          json.response = false;
-      }, 300000);
+    // Unset response
+    setTimeout(function () {
+        json.response = false;
+    }, 300000);
   }
+  res.write('Door answered!')
   res.end();
 }
 
 var server = restify.createServer();
-server.use(restify.bodyParser({ mapParams: false }));
+server.use(restify.bodyParser());
+server.use(restify.queryParser());
 server.use(restify.gzipResponse());
 
 // Setup CORS
@@ -50,6 +60,7 @@ var json = {
 
 server.get('/:name/door/knock', getResponse);
 server.get('/:name/door/answer', getResponse);
+server.get('/:name/door/answer/notification', answerDoor);
 server.post('/:name/door/knock', knock);
 server.post('/:name/door/answer', answerDoor);
 
