@@ -11,16 +11,16 @@ body {
 }
 
 .knock-button {
-  margin-top: 30vh;
   padding: 10px 50px;
-  background-color: rgb(65, 255, 217);
-  border-radius: 10px;
-  border: none;
-  font-weight: bold;
-  font-size: 15vw;
+  margin-top: 30vh;
   font-family: avenir, sans-serif;
-  -webkit-box-shadow: 0px 10px 0px rgb(77, 204, 179);
-  box-shadow: 0px 10px 0px rgb(77, 204, 179);
+  font-size: 15vw;
+  font-weight: bold;
+  background-color: rgb(65, 255, 217);
+  border: none;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 10px 0 rgb(77, 204, 179);
+  box-shadow: 0 10px 0 rgb(77, 204, 179);
 }
 
 .knock-button:focus {
@@ -30,8 +30,8 @@ body {
 .knock-button:active {
   margin-top: 31vh;
   background-color: rgb(105, 219, 197);
-  -webkit-box-shadow: 0px 4px 0px rgb(43, 145, 125);
-  box-shadow: 0px 4px 0px rgb(43, 145, 125);
+  -webkit-box-shadow: 0 4px 0 rgb(43, 145, 125);
+  box-shadow: 0 4px 0 rgb(43, 145, 125);
 }
 
 @-webkit-keyframes slide-up {
@@ -118,26 +118,26 @@ body {
 
 .tick {
   position: absolute;
-  font-size: 200px;
   top: 100%;
-  zoom: 1;
-  filter: alpha(opacity=10);
-  opacity: 0.1;
-  color: #fff;
   margin-left: -90px;
+  font-size: 200px;
+  color: #fff;
+  opacity: 0.1;
+  filter: alpha(opacity=10);
+  zoom: 1;
   -webkit-animation: slide-up 1.5s forwards;
   animation: slide-up 1.5s forwards;
 }
 
 .dot {
-  font-size: 10vw;
   display: inline-block;
-  zoom: 1;
-  filter: alpha(opacity=0);
-  opacity: 0;
-  color: rgb(65, 255, 217);
   padding: 2.5vw;
   margin-top: 30vh;
+  font-size: 10vw;
+  color: rgb(65, 255, 217);
+  opacity: 0;
+  filter: alpha(opacity=0);
+  zoom: 1;
   -webkit-animation: pulsate 2s infinite;
   animation: pulsate 2s infinite;
 }
