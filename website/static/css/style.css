@@ -120,8 +120,8 @@ body {
   position: absolute;
   top: 100%;
   left: 50%;
-  margin-left: -100px;
-  font-size: 200px;
+  margin-left: -20vw;
+  font-size: 40vw;
   color: #fff;
   opacity: 0.1;
   filter: alpha(opacity=10);
