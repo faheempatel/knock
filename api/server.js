@@ -52,7 +52,6 @@ restify.CORS.ALLOW_HEADERS.push('withcredentials');
 restify.CORS.ALLOW_HEADERS.push('x-requested-with');
 server.use(restify.CORS());
 
-
 var json = { 
     knock   : false
   , response: false
