@@ -35,16 +35,20 @@ body {
 }
 
 @-webkit-keyframes slide-up {
+  0% {
+    top: 100%;
+  }
+
   70% {
-    -webkit-transform: translateY(-196%);
+    top: -2%;
   }
 
   80% {
-    -webkit-transform: translateY(-191%);
+    top: 8%;
   }
 
   100% {
-    -webkit-transform: translateY(-195%);
+    top: 5%;
     zoom: 1;
     filter: alpha(opacity=100);
     opacity: 1;
@@ -52,16 +56,20 @@ body {
 }
 
 @keyframes slide-up {
+  0% {
+    top: 100%;
+  }
+
   70% {
-    transform: translateY(-196%);
+    top: -2%;
   }
 
   80% {
-    transform: translateY(-191%);
+    top: 8%;
   }
 
   100% {
-    transform: translateY(-195%);
+    top: 5%;
     zoom: 1;
     filter: alpha(opacity=100);
     opacity: 1;
