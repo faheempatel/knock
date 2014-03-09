@@ -2,5 +2,23 @@
   "dependencies": {
     "restify": "~2.6.1",
     "node-pushover": "~0.2.2"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Backend api for Anand's doorbell",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/faheempatel/knock"
+  },
+  "author": "Faheem Patel, Anand Subramaniam, Umar Qureshi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/faheempatel/knock/issues"
+  },
+  "homepage": "https://github.com/faheempatel/knock"
 }
