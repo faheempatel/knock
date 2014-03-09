@@ -12,7 +12,7 @@
   "main": "server.js",
   "devDependencies": {},
   "engines": {
-      "node": "0.11.11"
+      "node": ">=0.10.21"
   },
   "repository": {
     "type": "git",
