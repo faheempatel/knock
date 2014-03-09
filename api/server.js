@@ -62,6 +62,7 @@ server.get('/:name/door/answer/notification', answerDoor);
 server.post('/:name/door/knock', knock);
 server.post('/:name/door/answer', answerDoor);
 
-server.listen(8080, function() {
+var port = process.env.port || 5000;
+server.listen(port, function() {
   console.log('Server started!');
 });
