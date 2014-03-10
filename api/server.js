@@ -2,15 +2,15 @@ var restify = require('restify');
 var pushover = require('node-pushover');
 
 var push = new pushover({
-    token: process.ENV.token
-  , user : process.ENV.user
+    token: process.env.token
+  , user : process.env.user
 });
 
 function knock(req, res, next) {
   if (req.params.knock === 'true') {
     json.knock = true;
     json.response = false;
-    push.send("Knock", process.ENV.url + '/door/answer/notification?response=true');
+    push.send("Knock", process.env.url + '/door/answer/notification?response=true');
   }
   res.end();
 }
@@ -62,7 +62,7 @@ server.get('/:name/door/answer/notification', answerDoor);
 server.post('/:name/door/knock', knock);
 server.post('/:name/door/answer', answerDoor);
 
-var port = process.ENV.PORT || 5000;
+var port = process.env.PORT || 5000;
 server.listen(port, function() {
   console.log('Server started!');
 });
