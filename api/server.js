@@ -1,17 +1,16 @@
 var restify = require('restify');
-var config = require('./config');
 var pushover = require('node-pushover');
 
 var push = new pushover({
-    token: config.token
-  , user : config.user
+    token: process.env.token
+  , user : process.env.user
 });
 
 function knock(req, res, next) {
   if (req.params.knock === 'true') {
     json.knock = true;
     json.response = false;
-    push.send("Knock", config.url+'/door/answer/notification?response=true');
+    push.send("Knock", process.env.url + '/door/answer/notification?response=true');
   }
   res.end();
 }
@@ -63,6 +62,7 @@ server.get('/:name/door/answer/notification', answerDoor);
 server.post('/:name/door/knock', knock);
 server.post('/:name/door/answer', answerDoor);
 
-server.listen(8080, function() {
+var port = process.env.PORT || 5000;
+server.listen(port, function() {
   console.log('Server started!');
 });
