@@ -9,6 +9,8 @@ A doorbell for [Anand](https://twitter.com/subra_Anand).
 - [ ] Make a favicon
 - [ ] Make a push notification icon
 - [x] Lint CSS
+- [ ] Use CSS transform for animation
+- [ ] Button's active state on mobile
 
 ##Notes
 
