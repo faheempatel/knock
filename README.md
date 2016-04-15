@@ -1,6 +1,6 @@
 #Knock
 
-A doorbell for [Anand](https://twitter.com/subra_Anand).
+A doorbell for [Anand](https://twitter.com/subra_Anand). Some thoughts around Knock [here](http://blog.faheempatel.com/post/80599561986/last-month-with-two-friends-anand-and-umar-i).
 
 ##TODO
 - [ ] Make prettier
